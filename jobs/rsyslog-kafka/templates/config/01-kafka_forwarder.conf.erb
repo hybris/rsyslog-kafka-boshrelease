@@ -23,4 +23,4 @@ template(name="kafka_json" type="list") {
 }
 
 $ModLoad omkafka
-action(type="omkafka" topic="<%= p('rsyslog_kafka.topic') %>" broker=["<%= p("rsyslog_kafka.broker").join('","') %>"] template="kafka_json")
+action(type="omkafka" topic="<%= p('rsyslog_kafka.topic') %>" broker=["<%= p("rsyslog_kafka.brokers").join('","') %>"] template="kafka_json")

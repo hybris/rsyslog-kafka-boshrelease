@@ -9,7 +9,7 @@ templates:
 packages: []
 
 properties:
-  rsyslog_kafka.broker:
+  rsyslog_kafka.brokers:
     description: "List of kafka server (server:port)"
     default:
       - "localhost:9092"

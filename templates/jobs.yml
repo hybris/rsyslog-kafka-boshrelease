@@ -22,7 +22,7 @@ networks: (( merge ))
 
 properties:
   rsyslog_kafka:
-    broker:
+    brokers:
       - localhost:9092
     topic: boshrelease_rsyslog_kafka
     org: myorg

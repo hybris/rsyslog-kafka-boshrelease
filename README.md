@@ -55,3 +55,17 @@ You now suffix this file path to the `make_manifest` command:
 templates/make_manifest openstack-nova my-networking.yml
 bosh -n deploy
 ```
+
+### Properties
+
+```yaml
+---
+properties:
+  rsyslog_kafka:
+    brokers:
+      - localhost:9092  # required - Array of kafka servers
+    topic: kafka_topic  # required - Kafka topic
+    org: myorg          # required
+    space: myspace      # default to bosh deployment name
+    service: myservice  # default to bosh job name
+```
