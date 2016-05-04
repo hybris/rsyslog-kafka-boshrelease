@@ -1,7 +1,5 @@
 #!/bin/bash
 
-set -x
-
 # change to root of bosh release
 DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 cd $DIR/../..
@@ -22,11 +20,8 @@ _bosh() {
   bosh -n $@
 }
 
-
 set -e
 git submodule update --init --recursive --force
-
-find .
 
 _bosh delete deployment ${bosh_deployment_name} --force || echo "Continuing..."
 _bosh create release
