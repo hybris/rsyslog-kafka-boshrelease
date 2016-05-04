@@ -6,7 +6,7 @@ Background
 
 ### What is rsyslog-kafka?
 
-DESCRIPTION HERE
+This release integrates the omkafka module from rsyslog to forward your logs to a kafka cluster.
 
 Usage
 -----
