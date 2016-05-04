@@ -1,0 +1,5 @@
+check process rsyslog-kafka
+  with pidfile /var/vcap/sys/run/rsyslog-kafka/rsyslog-kafka.pid
+  start program "/var/vcap/jobs/rsyslog-kafka/bin/ctl start"
+  stop program "/var/vcap/jobs/rsyslog-kafka/bin/ctl stop"
+  group vcap

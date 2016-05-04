@@ -1,0 +1,29 @@
+---
+name: rsyslog-kafka
+
+templates:
+  bin/ctl.erb: bin/ctl
+  bin/once.sh: bin/once.sh
+  config/01-kafka_forwarder.conf.erb: etc/rsyslog.d/01-kafka_forwarder.conf
+
+packages: []
+
+properties:
+  rsyslog_kafka.broker:
+    description: "List of kafka server (server:port)"
+    default:
+      - "localhost:9092"
+  rsyslog_kafka.topic:
+    description: "kafka topic"
+    default: "boshrelease_poc"
+  rsyslog_kafka.org:
+    description: "Team organization"
+  rsyslog_kafka.space:
+    description: "Team space"
+    default: spec.deployment
+  rsyslog_kafka.service:
+    description: "Team service"
+    default: name
+  rsyslog_kafka.index:
+    description: "instance index"
+    default: index

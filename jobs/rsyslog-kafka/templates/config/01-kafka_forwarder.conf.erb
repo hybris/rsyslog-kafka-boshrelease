@@ -1,0 +1,26 @@
+<%
+  rsyslog_kafka_space = p("rsyslog_kafka.space") == "spec.deployment" ? spec.deployment : p("rsyslog_kafka.space")
+  rsyslog_kafka_service = p("rsyslog_kafka.service") == "name" ? name : p("rsyslog_kafka.service")
+  rsyslog_kafka_index = p("rsyslog_kafka.index") == "index" ? index : p("rsyslog_kafka.index")
+%>
+
+template(name="kafka_json" type="list") {
+  constant(value="{")
+  constant(value="\"type\":\"backingservice\",\"org\":\"<%= p('rsyslog_kafka.org') %>\",\"space\":\"<%= rsyslog_kafka_space %>\",\"service\":\"<%= rsyslog_kafka_service %>\",\"version\":\"1.0\",\"instance\":\"<%= rsyslog_kafka_index %>\",")
+  constant(value="\"timestamp\":\"")
+  property(name="timestamp" dateFormat="unixtimestamp")
+  property(name="timestamp" dateFormat="subseconds")
+  constant(value="000\",\"level\":\"")
+  property(name="syslogseverity-text")
+  constant(value="\",\"tags\":[]")
+  constant(value=",\"log\":{")
+  constant(value="\"logger\":\"")
+  property(name="programname")
+  constant(value="\",\"message\":\"")
+  property(name="msg" format="json")
+  constant(value="\"}")
+  constant(value="}")
+}
+
+$ModLoad omkafka
+action(type="omkafka" topic="<%= p('rsyslog_kafka.topic') %>" broker=["<%= p("rsyslog_kafka.broker").join('","') %>"] template="kafka_json")
