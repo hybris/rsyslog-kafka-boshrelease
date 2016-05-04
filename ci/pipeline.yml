@@ -33,7 +33,7 @@ jobs:
       - get: rsyslog-kafka-boshrelease
         resource: git-rsyslog-kafka-boshrelease
       - get: git-rsyslog-kafka-boshrelease-release-changes
-        trigger: true
+        trigger: false
     - task: create-release-and-deploy
       config:
         platform: linux
@@ -56,7 +56,7 @@ jobs:
     - get: boshrelease
       resource: git-rsyslog-kafka-boshrelease
       passed: [testflight]
-      trigger: true
+      trigger: false
     - get: version
       trigger: false
       params: {bump: minor, pre: rc}
