@@ -3,17 +3,15 @@
 # abort script on any command that exits with a non zero value
 set -e -x
 
-apt-get update
-apt-get install librdkafka-dev -y --no-install-recommends
+# download gomkafka module
+wget -q -O - https://github.com/hybris/gomkafka/releases/download/v0.1.0/gomkafka > /opt/gomkafka
 
-# check rsyslog version
-rsyslogd -v | head -1 | awk '{print $2}' | grep -o -e '[0-9.]\+' > /tmp/rsyslog.version
-
-# install omkafka module
-wget -q -O - https://github.com/hybris/rsyslog-modules/releases/download/v`cat /tmp/rsyslog.version`/omkafka.so > /usr/lib/rsyslog/omkafka.so
+# Set permissions
+chown syslog:syslog /opt/gomkafka
+chmod 0755 /opt/gomkafka
 
 # move config file
-cp /var/vcap/jobs/rsyslog-kafka/etc/rsyslog.d/01-kafka_forwarder.conf /etc/rsyslog.d/01-kafka_forwarder.conf
+cp /var/vcap/jobs/rsyslog-kafka/etc/rsyslog.d/02-ygomkafka.conf /etc/rsyslog.d/02-ygomkafka.conf
 
 # forward vcap logs
 if [ -f /etc/rsyslog.d/00-syslog_forwarder.conf ]; then

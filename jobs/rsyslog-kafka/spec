@@ -4,7 +4,9 @@ name: rsyslog-kafka
 templates:
   bin/ctl.erb: bin/ctl
   bin/once.sh: bin/once.sh
-  config/01-kafka_forwarder.conf.erb: etc/rsyslog.d/01-kafka_forwarder.conf
+  config/02-ygomkafka.conf.erb: etc/rsyslog.d/02-ygomkafka.conf
+
+
 
 packages: []
 
