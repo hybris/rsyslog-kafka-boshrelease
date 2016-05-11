@@ -1,0 +1,15 @@
+---
+packages: []
+jobs:
+- name: rsyslog-kafka
+  version: c835fd73c1ac33b2aaefb626178c7ef25c1eae6c
+  fingerprint: c835fd73c1ac33b2aaefb626178c7ef25c1eae6c
+  sha1: 93a54bf52c2900e6c7b294ae28704dd438c3dab9
+license:
+  version: 569a481663f95b10cb803539ba61a8c24a881463
+  fingerprint: 569a481663f95b10cb803539ba61a8c24a881463
+  sha1: 8aa2ed7a0a340ded3b0dfdda4081ec4c4927170e
+commit_hash: 54d0e25e
+uncommitted_changes: true
+name: rsyslog-kafka
+version: 1.3.0
