@@ -1,14 +1,13 @@
 ---
 name: rsyslog-kafka
 
+packages:
+ - gomkafka
+
 templates:
   bin/ctl.erb: bin/ctl
   bin/once.sh: bin/once.sh
   config/02-ygomkafka.conf.erb: etc/rsyslog.d/02-ygomkafka.conf
-
-
-
-packages: []
 
 properties:
   rsyslog_kafka.brokers:

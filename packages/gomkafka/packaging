@@ -1,0 +1,10 @@
+# abort script on any command that exits with a non zero value
+set -e -x
+
+dest=${BOSH_INSTALL_TARGET}/var/vcap/bin
+name=gomkafka
+
+mkdir -p $dest
+
+# move gomkafka module
+cp ./gomkafka/gomkafka_v0.2.0 $dest/$name

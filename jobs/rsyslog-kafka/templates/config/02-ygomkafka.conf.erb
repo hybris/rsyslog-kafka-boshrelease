@@ -35,4 +35,4 @@ template(name="kafka_template" type="list") {
 }
 
 $ModLoad omprog
-action(type="omprog" binary="/opt/gomkafka <%= p("rsyslog_kafka.brokers").join(',') %> <%= p('rsyslog_kafka.topic') %>" template="kafka_template")
+action(type="omprog" binary="/var/vcap/packages/gomkafka/var/vcap/bin/gomkafka <%= p("rsyslog_kafka.brokers").join(',') %> <%= p('rsyslog_kafka.topic') %>" template="kafka_template")

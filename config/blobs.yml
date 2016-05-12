@@ -1,1 +1,13 @@
---- {}
+---
+gomkafka/gomkafka:
+  object_id: d1518e71-a6c9-4be2-9b07-d55308dbfef7
+  sha: 0a2c35cbe9d407865c6637d88ceb7990015c782c
+  size: 6555280
+gomkafka_v0.2.0/gomkafka:
+  object_id: e66fbd7d-7bd7-456c-8ad7-c3997d7050be
+  sha: 0a2c35cbe9d407865c6637d88ceb7990015c782c
+  size: 6555280
+gomkafka/gomkafka_v0.2.0:
+  object_id: 46793ea7-810b-40dd-8d9b-8c2d8cc86473
+  sha: 0a2c35cbe9d407865c6637d88ceb7990015c782c
+  size: 6555280
