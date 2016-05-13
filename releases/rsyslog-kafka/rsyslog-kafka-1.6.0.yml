@@ -1,0 +1,20 @@
+---
+packages:
+- name: gomkafka
+  version: 28aedea0e9a6deff0dfbbcc5b3b93e2841511e24
+  fingerprint: 28aedea0e9a6deff0dfbbcc5b3b93e2841511e24
+  sha1: 6c1a38b27379d4698667269446ef3f3c894d4489
+  dependencies: []
+jobs:
+- name: rsyslog-kafka
+  version: 3cbb237d63ed3bed1cee873a491a5648c4cd3153
+  fingerprint: 3cbb237d63ed3bed1cee873a491a5648c4cd3153
+  sha1: 071c7372d28ee47adb6d051ee10bf6ae8f991b0b
+license:
+  version: 569a481663f95b10cb803539ba61a8c24a881463
+  fingerprint: 569a481663f95b10cb803539ba61a8c24a881463
+  sha1: 8aa2ed7a0a340ded3b0dfdda4081ec4c4927170e
+commit_hash: 720d10ba
+uncommitted_changes: true
+name: rsyslog-kafka
+version: 1.6.0
