@@ -14,7 +14,7 @@ template(name="kafka_template" type="list") {
   constant(value="|||")
   constant(value="service=<%= rsyslog_kafka_service %>")
   constant(value="|||")
-  constant(value="version=1.0")
+  constant(value="version=<%= p('rsyslog_kafka.version') %>")
   constant(value="|||")
   constant(value="instance=<%= rsyslog_kafka_index %>")
   constant(value="|||")

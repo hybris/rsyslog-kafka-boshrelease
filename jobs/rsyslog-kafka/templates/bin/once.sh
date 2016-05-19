@@ -17,4 +17,10 @@ if [ -f /etc/rsyslog.d/00-syslog_forwarder.conf ]; then
 fi;
 
 # restart rsyslog
-service rsyslog restart
+# service rsyslog restart
+
+# Create a cron to run the file generation
+(crontab -l | sed /generateCatchAll/d; echo "* * * * * /var/vcap/jobs/rsyslog-kafka/bin/generateCatchAll.sh") | sed /^$/d | crontab
+
+# Run it once now
+/var/vcap/jobs/rsyslog-kafka/bin/generateCatchAll.sh

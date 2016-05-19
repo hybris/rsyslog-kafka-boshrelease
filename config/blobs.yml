@@ -11,3 +11,11 @@ gomkafka/gomkafka_v0.2.0:
   object_id: 46793ea7-810b-40dd-8d9b-8c2d8cc86473
   sha: 0a2c35cbe9d407865c6637d88ceb7990015c782c
   size: 6555280
+gomkafka_v0.3.0/gomkafka:
+  object_id: 4a7ccfc0-9810-4f3e-9d75-b1893eac001a
+  sha: 93fe8b92fafcaffde440c82dd7b870ef675fc50c
+  size: 7242768
+gomkafka/gomkafka_v0.3.0:
+  object_id: 1aeac97c-6415-43d6-a336-ccbaa5905315
+  sha: 93fe8b92fafcaffde440c82dd7b870ef675fc50c
+  size: 7242768

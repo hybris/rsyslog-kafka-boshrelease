@@ -7,4 +7,4 @@ name=gomkafka
 mkdir -p $dest
 
 # move gomkafka module
-cp ./gomkafka/gomkafka_v0.2.0 $dest/$name
+cp ./gomkafka/gomkafka_v0.3.0 $dest/$name

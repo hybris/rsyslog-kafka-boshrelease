@@ -7,6 +7,7 @@ packages:
 templates:
   bin/ctl.erb: bin/ctl
   bin/once.sh: bin/once.sh
+  bin/generateCatchAll.sh: bin/generateCatchAll.sh
   config/02-ygomkafka.conf.erb: etc/rsyslog.d/02-ygomkafka.conf
 
 properties:
@@ -28,3 +29,6 @@ properties:
   rsyslog_kafka.index:
     description: "instance index"
     default: index
+  rsyslog_kafka.version:
+    description: "Version of your service (e.g. for mongodb v3.x, put '3.x')"
+    default: 0
