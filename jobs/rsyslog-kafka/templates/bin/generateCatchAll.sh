@@ -21,6 +21,7 @@ input(
   File="::filepath::"
   Tag="::progname::"
   Severity="::severity::"
+  freshStartTail="on"
 )
 EOF
 )
@@ -31,7 +32,7 @@ log_dir=/var/vcap/sys/log
 config_dir=/etc/rsyslog.d
 config_file=00-catchall.conf
 
-echo 'module(load="imfile" freshStartTail="on")' > ${config_dir}/${config_file}.tmp
+echo 'module(load="imfile")' > ${config_dir}/${config_file}.tmp
 
 function generateFile(){
 
