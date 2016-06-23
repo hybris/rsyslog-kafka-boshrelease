@@ -1,0 +1,7 @@
+---
+name: sauron
+
+dependencies: []
+
+files:
+  - sauron/sauron_v1.0.bin

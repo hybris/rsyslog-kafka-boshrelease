@@ -16,7 +16,7 @@ case $1 in
     if [ ! -f ${SCRIPT_DIR}/bin/ran ]; then
       bash -x ${SCRIPT_DIR}/bin/once.sh > ${SCRIPT_DIR}/bin/ran 2>&1
     fi;
-    echo 1 >> $PIDFILE
+    echo 1 > $PIDFILE
     ;;
 
   stop)

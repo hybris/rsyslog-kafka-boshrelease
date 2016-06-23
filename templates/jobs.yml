@@ -13,6 +13,10 @@ jobs:
     templates:
     - name: rsyslog-kafka
       release: rsyslog-kafka
+    - name: gomkafka
+      release: rsyslog-kafka
+    - name: sauron
+      release: rsyslog-kafka
     instances: 1
     persistent_disk: 0
     resource_pool: small_z1

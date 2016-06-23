@@ -1,0 +1,5 @@
+check process sauron
+  with pidfile /var/vcap/sys/run/sauron/sauron.pid
+  start program "/var/vcap/jobs/sauron/bin/ctl start"
+  stop program "/var/vcap/jobs/sauron/bin/ctl stop"
+  group vcap

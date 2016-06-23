@@ -1,0 +1,31 @@
+#!/bin/bash
+
+JOB_NAME=sauron
+
+SCRIPT_DIR=/var/vcap/jobs/$JOB_NAME
+RUN_DIR=/var/vcap/sys/run/$JOB_NAME
+LOG_DIR=/var/vcap/sys/log/$JOB_NAME
+PIDFILE=$RUN_DIR/$JOB_NAME.pid
+
+source $SCRIPT_DIR/helpers/ctl_setup.sh $JOB_NAME
+
+case $1 in
+  start)
+    pid_guard $PIDFILE $JOB_NAME
+
+    /var/vcap/packages/sauron/var/vcap/bin/sauron \
+      --tcpDial 127.0.0.1:<%= p('rsyslog_kafka.gomkafka_tcp_port') %> \
+      --path /var/vcap/sys/log \
+      --template ${SCRIPT_DIR}/config/output.tmpl \
+      --debug <%= p('rsyslog_kafka.sauron_debug_level') %> &
+
+    echo $! > $PIDFILE
+    ;;
+
+  stop)
+    kill_and_wait $PIDFILE
+    ;;
+
+  *)
+  echo "Usage: ctl {start|stop}" ;;
+esac

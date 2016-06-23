@@ -19,3 +19,11 @@ gomkafka/gomkafka_v0.3.0:
   object_id: 1aeac97c-6415-43d6-a336-ccbaa5905315
   sha: 93fe8b92fafcaffde440c82dd7b870ef675fc50c
   size: 7242768
+gomkafka/gomkafka_v2.0.bin:
+  object_id: de78245d-948f-418c-a6e1-52515170932a
+  sha: 58eebf45b9a0857c1a47b0025e5223204d7c86ec
+  size: 7393680
+sauron/sauron_v1.0.bin:
+  object_id: f1ddf3f9-e3ed-430a-b2fb-6db184b40e7d
+  sha: cc583cf0a7b444e3f5d9b24831f2361437a9d232
+  size: 6100224

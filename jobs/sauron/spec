@@ -1,0 +1,23 @@
+---
+name: sauron
+
+packages:
+ - sauron
+
+templates:
+  bin/ctl.erb: bin/ctl
+  config/output.tmpl.erb: config/output.tmpl
+  helpers/ctl_setup.sh: helpers/ctl_setup.sh
+  helpers/ctl_utils.sh: helpers/ctl_utils.sh
+
+properties:
+  rsyslog_kafka.topic:
+    description: "kafka topic"
+    default: "boshrelease_poc"
+  rsyslog_kafka.gomkafka_tcp_port:
+    description: "tcp port gomkafka is listening to"
+    default: "7886"
+  rsyslog_kafka.sauron_debug_level:
+    description: "Log level [INFO,WARNING,ERROR,DEBUG,TRACE]"
+    default: "INFO"
+    

@@ -4,30 +4,18 @@
   rsyslog_kafka_index = p("rsyslog_kafka.index") == "index" ? index : p("rsyslog_kafka.index")
 %>
 
-template(name="kafka_template" type="list") {
-  constant(value="|||")
-  constant(value="type=backingservice")
-  constant(value="|||")
-  constant(value="org=<%= p('rsyslog_kafka.org') %>")
-  constant(value="|||")
-  constant(value="space=<%= rsyslog_kafka_space %>")
-  constant(value="|||")
-  constant(value="service=<%= rsyslog_kafka_service %>")
-  constant(value="|||")
-  constant(value="version=<%= p('rsyslog_kafka.version') %>")
-  constant(value="|||")
-  constant(value="instance=<%= rsyslog_kafka_index %>")
-  constant(value="|||")
-  constant(value="level=")
-  property(name="syslogseverity-text")
-  constant(value="|||")
-  constant(value="logger=")
-  property(name="programname")
-  constant(value="|||")
-  constant(value="message=")
-  property(name="msg")
+template(name="kafkaTemplate" type="list") {
+  constant(value="|||topic=<%= p('rsyslog_kafka.topic') %>")
+  constant(value="|||type=backingservice")
+  constant(value="|||org=<%= p('rsyslog_kafka.org') %>")
+  constant(value="|||space=<%= rsyslog_kafka_space %>")
+  constant(value="|||service=<%= rsyslog_kafka_service %>")
+  constant(value="|||version=<%= p('rsyslog_kafka.version') %>")
+  constant(value="|||instance=<%= rsyslog_kafka_index %>")
+  constant(value="|||level=")   property(name="syslogseverity-text")
+  constant(value="|||logger=")  property(name="programname")
+  constant(value="|||message=") property(name="msg")
   constant(value="|||\n")
 }
 
-$ModLoad omprog
-action(type="omprog" binary="/var/vcap/packages/gomkafka/var/vcap/bin/gomkafka <%= p("rsyslog_kafka.brokers").join(',') %> <%= p('rsyslog_kafka.topic') %>" template="kafka_template")
+*.* @@127.0.0.1:<%= p('rsyslog_kafka.gomkafka_tcp_port') %>;kafkaTemplate

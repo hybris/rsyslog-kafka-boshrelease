@@ -4,4 +4,4 @@ name: gomkafka
 dependencies: []
 
 files:
-  - gomkafka/gomkafka_v0.3.0
+  - gomkafka/gomkafka_v2.0.bin

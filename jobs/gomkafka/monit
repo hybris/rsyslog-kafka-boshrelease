@@ -1,0 +1,5 @@
+check process gomkafka
+  with pidfile /var/vcap/sys/run/gomkafka/gomkafka.pid
+  start program "/var/vcap/jobs/gomkafka/bin/ctl start"
+  stop program "/var/vcap/jobs/gomkafka/bin/ctl stop"
+  group vcap

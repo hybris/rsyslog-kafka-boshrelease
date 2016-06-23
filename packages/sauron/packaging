@@ -2,12 +2,13 @@
 set -e -x
 
 dest=${BOSH_INSTALL_TARGET}/var/vcap/bin
-name=gomkafka
+name=sauron
 
 mkdir -p $dest
 
-# move gomkafka module
-cp ./gomkafka/gomkafka_v2.0.bin $dest/$name
+# move sauron module
+cp ./sauron/sauron_v1.0.bin $dest/$name
 
 chown syslog:syslog $dest/$name
 chmod 0755 $dest/$name
+
