@@ -16,12 +16,24 @@ source $SCRIPT_DIR/helpers/ctl_setup.sh $JOB_NAME
 
 case $1 in
   start)
+
+    # Check for [dynamic_availability_zone] placeholder
+    AZ=""
+    res=$(nc -z -w 3 169.254.169.254 80)
+    if [ $? -eq 0 ];
+    then
+      AZ=$(curl -s http://169.254.169.254/latest/meta-data/placement/availability-zone)
+    fi;
+    
+    brokers="<%= p("rsyslog_kafka.brokers").join(',') %>"
+    brokers=$(sed "s,\[dynamic_availability_zone\],$AZ,g" <<< ${brokers})
+    
     pid_guard $PIDFILE $JOB_NAME
 
     /var/vcap/packages/gomkafka/var/vcap/bin/gomkafka \
       --tcpPort <%= p('rsyslog_kafka.gomkafka_tcp_port') %> \
       --maxQueue 10000000 \
-      --brokers <%= p("rsyslog_kafka.brokers").join(',') %> \
+      --brokers $brokers \
       --debug <%= p('rsyslog_kafka.gomkafka_debug_level') %> &
 
     echo $! > $PIDFILE
