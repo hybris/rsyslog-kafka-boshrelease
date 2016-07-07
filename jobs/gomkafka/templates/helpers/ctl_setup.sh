@@ -10,7 +10,7 @@
 # source /var/vcap/jobs/foobar/helpers/ctl_setup.sh foobar foobar
 # source /var/vcap/jobs/foobar/helpers/ctl_setup.sh foobar nginx
 
-set -e # exit immediately if a simple command exits with a non-zero status
+# set -e # exit immediately if a simple command exits with a non-zero status
 set -u # report the usage of uninitialized variables
 
 JOB_NAME=$1

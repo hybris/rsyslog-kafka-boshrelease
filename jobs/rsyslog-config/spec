@@ -1,5 +1,5 @@
 ---
-name: rsyslog-kafka
+name: rsyslog-config
 
 templates:
   bin/ctl.erb: bin/ctl

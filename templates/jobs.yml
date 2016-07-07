@@ -11,7 +11,7 @@ update:
 jobs:
   - name: rsyslog-kafka
     templates:
-    - name: rsyslog-kafka
+    - name: rsyslog-config
       release: rsyslog-kafka
     - name: gomkafka
       release: rsyslog-kafka

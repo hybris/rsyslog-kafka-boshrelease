@@ -11,9 +11,27 @@ templates:
   helpers/ctl_utils.sh: helpers/ctl_utils.sh
 
 properties:
+  rsyslog_kafka.brokers:
+    description: "List of kafka server (server:port)"
+    default:
+      - "localhost:9092"
   rsyslog_kafka.topic:
     description: "kafka topic"
     default: "boshrelease_poc"
+  rsyslog_kafka.org:
+    description: "Team organization"
+  rsyslog_kafka.space:
+    description: "Team space"
+    default: spec.deployment
+  rsyslog_kafka.service:
+    description: "Team service"
+    default: name
+  rsyslog_kafka.index:
+    description: "instance index"
+    default: index
+  rsyslog_kafka.version:
+    description: "Version of your service (e.g. for mongodb v3.x, put '3.x')"
+    default: 0
   rsyslog_kafka.gomkafka_tcp_port:
     description: "tcp port gomkafka is listening to"
     default: "7886"

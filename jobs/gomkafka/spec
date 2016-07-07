@@ -9,6 +9,10 @@ templates:
   helpers/ctl_setup.sh: helpers/ctl_setup.sh
   helpers/ctl_utils.sh: helpers/ctl_utils.sh
 properties:
+  rsyslog_kafka.brokers:
+    description: "List of kafka server (server:port)"
+    default:
+      - "localhost:9092"
   rsyslog_kafka.gomkafka_tcp_port:
     description: "tcp port gomkafka is listening to"
     default: "7886"

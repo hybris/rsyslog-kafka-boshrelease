@@ -1,0 +1,5 @@
+check process rsyslog-config
+  with pidfile /var/vcap/sys/run/rsyslog-config/rsyslog-config.pid
+  start program "/var/vcap/jobs/rsyslog-config/bin/ctl start"
+  stop program "/var/vcap/jobs/rsyslog-config/bin/ctl stop"
+  group vcap
