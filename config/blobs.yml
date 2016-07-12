@@ -27,3 +27,11 @@ sauron/sauron_v1.0.bin:
   object_id: f1ddf3f9-e3ed-430a-b2fb-6db184b40e7d
   sha: cc583cf0a7b444e3f5d9b24831f2361437a9d232
   size: 6100224
+gomkafka/gomkafka_v3.0.bin:
+  object_id: 392921f1-e553-4760-9f11-66a0fe89991d
+  sha: 5228daaa51812b2f86c2ce0d9c302c9e1ffa9e24
+  size: 9570984
+sauron/sauron_v2.0.bin:
+  object_id: '088affae-3a73-414c-8a10-fa29e4ee9ab0'
+  sha: 0d357a2fd588adefda3b82a201ea19741b02e0ca
+  size: 9924880
