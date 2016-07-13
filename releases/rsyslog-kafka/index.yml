@@ -30,4 +30,6 @@ builds:
     version: v2.2.0
   13391aa4-6215-4c6c-bd31-d58a1e1190a2:
     version: v2.2.1
+  6ce1aa3b-e400-4cbd-bca3-6ef43e9ffa52:
+    version: v2.2.2
 format-version: '2'
