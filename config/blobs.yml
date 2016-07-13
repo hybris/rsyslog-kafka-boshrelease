@@ -28,9 +28,9 @@ sauron/sauron_v1.0.bin:
   sha: cc583cf0a7b444e3f5d9b24831f2361437a9d232
   size: 6100224
 gomkafka/gomkafka_v3.0.bin:
-  object_id: 392921f1-e553-4760-9f11-66a0fe89991d
-  sha: 5228daaa51812b2f86c2ce0d9c302c9e1ffa9e24
-  size: 9570984
+  object_id: 560e3533-e871-4c8a-9d14-044d006c1091
+  sha: 44691f85696a7ba9159c329c85f260ab084a2324
+  size: 9571120
 sauron/sauron_v2.0.bin:
   object_id: '088affae-3a73-414c-8a10-fa29e4ee9ab0'
   sha: 0d357a2fd588adefda3b82a201ea19741b02e0ca
