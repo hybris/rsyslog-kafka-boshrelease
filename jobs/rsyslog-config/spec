@@ -4,6 +4,7 @@ name: rsyslog-config
 templates:
   bin/ctl.erb: bin/ctl
   bin/once.sh: bin/once.sh
+  bin/stats.sh: bin/stats.sh
   config/02-ygomkafka.conf.erb: etc/rsyslog.d/02-ygomkafka.conf
 
 properties:

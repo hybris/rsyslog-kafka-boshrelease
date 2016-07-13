@@ -33,7 +33,7 @@ case $1 in
     /var/vcap/packages/gomkafka/var/vcap/bin/gomkafka \
       --socketPath /tmp/gomkafka.sock \
       --tcpPort <%= p('rsyslog_kafka.gomkafka_tcp_port') %> \
-      --maxQueue 10000000 \
+      --maxQueue 1000000 \
       --brokers $brokers \
       --debug <%= p('rsyslog_kafka.gomkafka_debug_level') %> &
 
