@@ -7,7 +7,7 @@ name=sauron
 mkdir -p $dest
 
 # move sauron module
-cp ./sauron/sauron_v2.0.bin $dest/$name
+cp ./sauron/sauron_v2.0.1.bin $dest/$name
 
 chown syslog:syslog $dest/$name
 chmod 0755 $dest/$name

@@ -4,4 +4,4 @@ name: sauron
 dependencies: []
 
 files:
-  - sauron/sauron_v2.0.bin
+  - sauron/sauron_v2.0.1.bin
