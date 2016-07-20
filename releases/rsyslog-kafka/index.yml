@@ -34,4 +34,6 @@ builds:
     version: v2.2.2
   17c0add1-973b-4a78-8ad0-e568a1fa8fe5:
     version: v2.2.3
+  3ea03e8b-6d9a-4ea5-ba3d-fdfe0551d0dc:
+    version: v2.2.4
 format-version: '2'
