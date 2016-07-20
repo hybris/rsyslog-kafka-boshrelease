@@ -2,4 +2,4 @@
   rsyslog_kafka_space = p("rsyslog_kafka.space") == "spec.deployment" ? spec.deployment : p("rsyslog_kafka.space")
   rsyslog_kafka_service = p("rsyslog_kafka.service") == "name" ? name : p("rsyslog_kafka.service")
   rsyslog_kafka_index = p("rsyslog_kafka.index") == "index" ? index : p("rsyslog_kafka.index")
-%>|||topic=<%= p('rsyslog_kafka.topic') %>|||type=backingservices|||org=<%= p('rsyslog_kafka.org') %>|||space=<%= rsyslog_kafka_space %>|||service=<%= rsyslog_kafka_service %>|||version=<%= p('rsyslog_kafka.version') %>|||instance=<%= rsyslog_kafka_index %>|||level={{.Severity}}|||logger={{.Progname}}|||message={{.Message}}|||
+%>|||topic=<%= p('rsyslog_kafka.topic') %>|||type=backingservice|||org=<%= p('rsyslog_kafka.org') %>|||space=<%= rsyslog_kafka_space %>|||service=<%= rsyslog_kafka_service %>|||version=<%= p('rsyslog_kafka.version') %>|||instance=<%= rsyslog_kafka_index %>|||level={{.Severity}}|||logger={{.Progname}}|||message={{.Message}}|||
