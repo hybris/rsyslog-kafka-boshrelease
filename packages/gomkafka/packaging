@@ -7,7 +7,7 @@ name=gomkafka
 mkdir -p $dest
 
 # move gomkafka module
-cp ./gomkafka/gomkafka_v3.0.2.bin $dest/$name
+cp ./gomkafka/gomkafka_v3.1.0.bin $dest/$name
 
 chown syslog:syslog $dest/$name
 chmod 0755 $dest/$name

@@ -51,3 +51,7 @@ sauron/sauron_v2.0.2.bin:
   object_id: 7c637709-c796-4184-a452-5deb33d2f5cf
   sha: b8a52bbf044160dc5b2fe572b145936cebb50efa
   size: 9924952
+gomkafka/gomkafka_v3.1.0.bin:
+  object_id: 8a5b584f-8954-473f-96bc-e36903162a68
+  sha: 3edf9a98408b2cbfc183c1802ce72c7eb05577bc
+  size: 9720072
