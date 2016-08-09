@@ -40,4 +40,6 @@ builds:
     version: v2.2.5
   373ea390-4c79-4897-8580-7b63096c1117:
     version: v2.3.0
+  f9243fd4-2048-4f6f-b729-36c5c2a6c8cb:
+    version: v2.3.1
 format-version: '2'
