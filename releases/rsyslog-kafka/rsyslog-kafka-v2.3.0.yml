@@ -1,0 +1,33 @@
+---
+packages:
+- name: gomkafka
+  version: 7b6ce6d20d25b0ed6bb7b602e9385cb0ea92be6b
+  fingerprint: 7b6ce6d20d25b0ed6bb7b602e9385cb0ea92be6b
+  sha1: fde1cb7af807c3bb58d212c7b260c5846891846b
+  dependencies: []
+- name: sauron
+  version: 94db1b94d2817fb9fe5c394701a5edbf3475db74
+  fingerprint: 94db1b94d2817fb9fe5c394701a5edbf3475db74
+  sha1: 4861dc4f15f97f5dfe2589d7be2ebdeb33dc5944
+  dependencies: []
+jobs:
+- name: gomkafka
+  version: 3776724717c1d163696ea95b71fce99bd85fcb18
+  fingerprint: 3776724717c1d163696ea95b71fce99bd85fcb18
+  sha1: 79765a6ee1a6d30f23cd199434deabf07b1de177
+- name: rsyslog-config
+  version: 35051e9e745216dea460c7aea2e2150fe29be281
+  fingerprint: 35051e9e745216dea460c7aea2e2150fe29be281
+  sha1: c835305354dea001177609dfbf2f5a00a8047f8f
+- name: sauron
+  version: c23d4ccc980f3246c6547aab6363a2a45e4bd2ae
+  fingerprint: c23d4ccc980f3246c6547aab6363a2a45e4bd2ae
+  sha1: ed005268aa9c092ff3f101e296d0dfa057a74e6e
+license:
+  version: 569a481663f95b10cb803539ba61a8c24a881463
+  fingerprint: 569a481663f95b10cb803539ba61a8c24a881463
+  sha1: 8aa2ed7a0a340ded3b0dfdda4081ec4c4927170e
+commit_hash: cbe2f099
+uncommitted_changes: true
+name: rsyslog-kafka
+version: v2.3.0
