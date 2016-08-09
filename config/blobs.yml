@@ -47,3 +47,7 @@ sauron/sauron_v2.0.1.bin:
   object_id: 23091ddf-4539-4bef-a3bf-b30b96b8a125
   sha: 9f51733aeec1be92460a4f56803806f2f14d6948
   size: 9924880
+sauron/sauron_v2.0.2.bin:
+  object_id: 7c637709-c796-4184-a452-5deb33d2f5cf
+  sha: b8a52bbf044160dc5b2fe572b145936cebb50efa
+  size: 9924952
