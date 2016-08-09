@@ -1,13 +1,13 @@
 # abort script on any command that exits with a non zero value
 set -e -x
 
-dest=${BOSH_INSTALL_TARGET}/var/vcap/bin
+dest=${BOSH_INSTALL_TARGET}
 name=gomkafka
 
 mkdir -p $dest
 
 # move gomkafka module
-cp ./gomkafka/gomkafka_v3.1.0.bin $dest/$name
+cp ./gomkafka/`ls ./gomkafka | sort -rV | head -n 1` $dest/$name
 
 chown syslog:syslog $dest/$name
 chmod 0755 $dest/$name

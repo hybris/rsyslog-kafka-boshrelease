@@ -1,13 +1,14 @@
 # abort script on any command that exits with a non zero value
 set -e -x
 
-dest=${BOSH_INSTALL_TARGET}/var/vcap/bin
+dest=${BOSH_INSTALL_TARGET}
 name=sauron
 
 mkdir -p $dest
 
 # move sauron module
-cp ./sauron/sauron_v2.0.2.bin $dest/$name
+cp ./sauron/`ls ./sauron | sort -rV | head -n 1` $dest/$name
+
 
 chown syslog:syslog $dest/$name
 chmod 0755 $dest/$name
