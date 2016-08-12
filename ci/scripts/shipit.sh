@@ -65,4 +65,4 @@ bosh -n create release --final --with-tarball --version "$version"
 git add -A
 git commit -m "release v${version}"
 
-find /
+find ../..
