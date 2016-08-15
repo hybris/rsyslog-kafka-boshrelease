@@ -48,4 +48,6 @@ builds:
     version: 2.3.3
   83a0f513-8431-42c6-90e4-f84744959305:
     version: 2.11.0
+  e5e8b9c4-984c-46d2-a698-603c3f34532d:
+    version: 3.1.0
 format-version: '2'
