@@ -15,7 +15,7 @@ fi
 
 CREDENTIALS=$(mktemp /tmp/credentials.XXXXX)
 
-vault read -field=value -tls-skip-verify secret/bosh/rsyslog-kafka-boshrelease/concourse > ${CREDENTIALS}
+vault read -field=value -tls-skip-verify secret/concourse/rsyslog-kafka-boshrelease > ${CREDENTIALS}
 
 fly -t ${TARGET} set-pipeline -c pipeline.yml --load-vars-from=${CREDENTIALS} --pipeline=${PIPELINE_NAME}
 if [ $? -ne 0 ]; then
