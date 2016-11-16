@@ -33,3 +33,6 @@ properties:
     space: myspace
     service: myservice
     index: 4012
+    sauron_exclude_path_list:
+     - "^/monit/*$"
+     - "^/other_path_to_exlude/*$"

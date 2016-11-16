@@ -17,8 +17,8 @@ case $1 in
       --socketPath /tmp/gomkafka.sock \
       --path /var/vcap/sys/log \
       --template ${SCRIPT_DIR}/config/output.tmpl \
-      --debug <%= p('rsyslog_kafka.sauron_debug_level') %> &
-
+      --debug <%= p('rsyslog_kafka.sauron_debug_level') %> \
+      <% p("rsyslog_kafka.sauron_exclude_path_list").each do |excludePath| %> --exclude "<%= excludePath %>" <% end %> &
     echo $! > $PIDFILE
     ;;
 

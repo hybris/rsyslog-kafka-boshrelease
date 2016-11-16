@@ -38,4 +38,7 @@ properties:
   rsyslog_kafka.sauron_debug_level:
     description: "Log level [INFO,WARNING,ERROR,DEBUG,TRACE]"
     default: "INFO"
+  rsyslog_kafka.sauron_exclude_path_list:
+    description: "List of path to exclude from the watch list (regexp)"
+    default: []
     
