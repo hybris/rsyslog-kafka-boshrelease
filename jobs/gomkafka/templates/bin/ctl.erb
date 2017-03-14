@@ -12,7 +12,7 @@ RUN_DIR=/var/vcap/sys/run/$JOB_NAME
 LOG_DIR=/var/vcap/sys/log/$JOB_NAME
 PIDFILE=$RUN_DIR/$JOB_NAME.pid
 
-source $SCRIPT_DIR/helpers/ctl_setup.sh $JOB_NAME 
+source $SCRIPT_DIR/helpers/ctl_setup.sh $JOB_NAME
 
 case $1 in
   start)
@@ -24,10 +24,10 @@ case $1 in
     then
       AZ=$(curl -s http://169.254.169.254/latest/meta-data/placement/availability-zone)
     fi;
-    
+
     brokers="<%= p("rsyslog_kafka.brokers").join(',') %>"
     brokers=$(sed "s,\[dynamic_availability_zone\],$AZ,g" <<< ${brokers})
-    
+
     pid_guard $PIDFILE $JOB_NAME
 
     # increasing the open files limits
@@ -36,7 +36,6 @@ case $1 in
     /var/vcap/packages/gomkafka/gomkafka \
       --socketPath /tmp/gomkafka.sock \
       --tcpPort <%= p('rsyslog_kafka.gomkafka_tcp_port') %> \
-      --maxQueue 1000000 \
       --brokers $brokers \
       --debug <%= p('rsyslog_kafka.gomkafka_debug_level') %> &
 
