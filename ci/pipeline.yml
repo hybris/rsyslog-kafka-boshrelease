@@ -32,8 +32,6 @@ jobs:
     - aggregate:
       - get: rsyslog-kafka-boshrelease
         resource: git-rsyslog-kafka-boshrelease
-      # - get: git-rsyslog-kafka-boshrelease-release-changes
-      #   trigger: false
     - task: create-release-and-deploy
       config:
         platform: linux
@@ -160,8 +158,8 @@ resources:
     uri: {{pipeline-git-repo}}
     branch: {{pipeline-branch}}
 
-- name: git-rsyslog-kafka-boshrelease-release-changes
-  type: git
+# - name: git-rsyslog-kafka-boshrelease-release-changes
+# type: git
 #   source: 
 #     uri: {{pipeline-git-repo}}
 #     branch: {{pipeline-branch}}
