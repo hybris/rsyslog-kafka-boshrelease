@@ -63,3 +63,7 @@ gomkafka/gomkafka_v4.0.0.bin:
   object_id: f8497f4e-2a7b-41a2-a98b-743d21504e64
   sha: a70087baaa7305969ce7cb737662b245e625dde6
   size: 7375755
+gomkafka/gomkafka_v4.0.1.bin:
+  object_id: 45b72ac0-35ae-49a3-86e9-705b24e803e5
+  sha: 960dd1643509169031c7cff4a6a836ee770f5e57
+  size: 7375832
