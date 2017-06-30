@@ -35,7 +35,10 @@ jobs:
     - task: create-release-and-deploy
       config:
         platform: linux
-        image: {{docker-hub-task-image}}
+        image_resource:
+          type: docker-image
+          source:
+            repository: teamidefix/rsyslog-kafka-boshrelease-pipeline
         inputs:
         - {name: rsyslog-kafka-boshrelease}
         run:
@@ -105,7 +108,10 @@ jobs:
   - task: create-final-release
     config:
       platform: linux
-      image: {{docker-hub-task-image}}
+      image_resource:
+        type: docker-image
+        source:
+          repository: teamidefix/rsyslog-kafka-boshrelease-pipeline
       inputs:
       - {name: boshrelease, path: rsyslog-kafka-boshrelease}
       - {name: version}
@@ -160,7 +166,7 @@ resources:
 
 # - name: git-rsyslog-kafka-boshrelease-release-changes
 # type: git
-#   source: 
+#   source:
 #     uri: {{pipeline-git-repo}}
 #     branch: {{pipeline-branch}}
 #     paths:
